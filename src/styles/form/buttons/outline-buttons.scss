@@ -1,0 +1,63 @@
+@mixin outlineBtn($config) {
+    background: transparent;
+    border: 1px solid map-get($config, color);
+    color: map-get($config, color);
+
+    &:hover {
+        border: 1px solid map-get($config, colorOnHover);
+        color: map-get($config, colorOnHover); 
+    }
+
+    &:active, &:focus  {
+        border: 1px solid map-get($config, colorOnFocus);
+        color: map-get($config, colorOnFocus); 
+    }
+}
+
+.an-btn-outline-primary {
+    @include outlineBtn((
+        color: $primary,
+        colorOnHover: $primaryOnHover,
+        colorOnFocus: $primaryOnFocus
+    ));
+}
+
+.an-btn-outline-secondary {
+    @include outlineBtn((
+        color: $secondary,
+        colorOnHover: $secondaryOnHover,
+        colorOnFocus: $secondaryOnFocus
+    ));
+}
+
+.an-btn-outline-success {
+    @include outlineBtn((
+        color: $success,
+        colorOnHover: $successOnHover,
+        colorOnFocus: $successOnFocus
+    ));
+}
+
+.an-btn-outline-warn {
+    @include outlineBtn((
+        color: $warn,
+        colorOnHover: $warnOnHover,
+        colorOnFocus: $warnOnFocus
+    ));
+}
+
+.an-btn-outline-danger {
+    @include outlineBtn((
+        color: $danger,
+        colorOnHover: $dangerOnHover,
+        colorOnFocus: $dangerOnFocus
+    ));
+}
+
+.an-btn-outline-info {
+    @include outlineBtn((
+        color: $info,
+        colorOnHover: $infoOnHover,
+        colorOnFocus: $infoOnFocus
+    ));
+}

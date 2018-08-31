@@ -1,0 +1,47 @@
+.an-btn-group {
+    display: flex;
+    
+    .an-btn {
+        
+        &:first-child {
+            position: relative;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 10%;
+                height: 80%;
+                margin-left: 20px;
+                z-index: 1;
+                width: 0.5px;
+                background: $divider;
+            }
+        }
+
+        &:last-child {
+            position: relative;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &:not(:nth-child(2)) {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 10%;
+                    height: 80%;
+                    margin-left: -20px;
+                    z-index: 1;
+                    width: 0.5px;
+                    background: $divider;
+                }
+            }
+        }
+
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+    }
+        
+}

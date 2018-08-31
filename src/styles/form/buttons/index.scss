@@ -1,0 +1,16 @@
+.an-btn {
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &[disabled] {
+        opacity: 0.5;
+    }
+} 
+
+@import 'buttons';
+@import 'outline-buttons';
+@import 'group-buttons';

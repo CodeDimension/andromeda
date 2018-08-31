@@ -1,0 +1,74 @@
+@mixin alert($config) {
+    background: map-get($config, color);
+    border-color: map-get($config, border);
+    color: map-get($config, fontColor);
+}
+
+.an-alert {
+    color: $fontColor;
+    
+    padding: 10px 30px;
+    border-radius: 45px;
+    min-height: 20px;
+    border-width: 1px;
+    border-style: solid;
+
+    display: flex;
+    align-items: center;
+
+    min-width: 185px;
+    max-width: 525px;
+    
+    .an-alert-close {
+        margin-left: auto;
+        font-weight: bolder;
+    }
+}
+
+.an-alert-primary { 
+    @include alert((
+        color: $primary,
+        border: $primaryOnHover,
+        fontColor: $fontColor
+    ));
+}
+
+.an-alert-secondary { 
+    @include alert((
+        color: $secondary,
+        border: $secondaryOnHover,
+        fontColor: $darkFontColor
+    ));
+}
+
+.an-alert-success { 
+    @include alert((
+        color: $success,
+        border: $successOnHover,
+        fontColor: $fontColor
+    ));
+}
+
+.an-alert-warn { 
+    @include alert((
+        color: $warn,
+        border: $warnOnHover,
+        fontColor: $fontColor
+    ));
+}
+
+.an-alert-danger { 
+    @include alert((
+        color: $danger,
+        border: $dangerOnHover,
+        fontColor: $fontColor
+    ));
+}
+
+.an-alert-info { 
+    @include alert((
+        color: $info,
+        border: $infoOnHover,
+        fontColor: $fontColor
+    ));
+}

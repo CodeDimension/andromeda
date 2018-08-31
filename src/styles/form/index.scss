@@ -1,0 +1,112 @@
+@import 'input';
+@import 'select';
+@import 'textarea';
+@import 'checkbox';
+@import 'radio';
+@import 'slide-toggle';
+@import 'buttons/index';
+.an-field-border {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .an-field-label {
+        margin-left: 17px;
+        margin-bottom: 5px;
+    }
+    .an-field-msg {
+        margin-left: 17px;
+        min-height: 20px;
+    }
+}
+
+.an-field-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .an-field-label {
+        margin-bottom: 5px;
+    }
+    .an-field-msg {
+        min-height: 20px;
+    }
+}
+
+.an-field-inline {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .an-field-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+@mixin applyColors($config) {
+    .an-input,
+    .an-select,
+    .an-textarea,
+    .an-checkbox,
+    .an-radio,
+    .an-slide-toggle {
+        border-color: map-get($config, color);
+        &:hover {
+            border-color: map-get($config, colorOnHover);
+        }
+        &:focus {
+            border-color: map-get($config, colorOnFocus);
+        }
+    }
+    .an-checkbox,
+    .an-radio,
+    .an-slide-toggle {
+        &:checked:after {
+            background: map-get($config, color);
+            &:hover {
+                background: map-get($config, colorOnHover)
+            }
+            &:focus {
+                background: map-get($config, colorOnFocus);
+            }
+        }
+    }
+    .an-slide-toggle {
+        &:after {
+            background: map-get($config, color);
+            &:hover {
+                background: map-get($config, colorOnHover)
+            }
+            &:focus {
+                background: map-get($config, colorOnFocus);
+            }
+        }
+    }
+    .an-field-msg {
+        color: map-get($config, color);
+    }
+}
+
+.an-field-primary {
+    @include applyColors(( color: $primary, colorOnHover: $primaryOnHover, colorOnFocus: $primaryOnFocus));
+}
+
+.an-field-secondary {
+    @include applyColors(( color: $secondary, colorOnHover: $secondaryOnHover, colorOnFocus: $secondaryOnFocus));
+}
+
+.an-field-success {
+    @include applyColors(( color: $success, colorOnHover: $successOnHover, colorOnFocus: $successOnFocus));
+}
+
+.an-field-danger {
+    @include applyColors(( color: $danger, colorOnHover: $dangerOnHover, colorOnFocus: $dangerOnFocus));
+}
+
+.an-field-warn {
+    @include applyColors(( color: $warn, colorOnHover: $warnOnHover, colorOnFocus: $warnOnFocus));
+}
+
+.an-field-info {
+    @include applyColors(( color: $info, colorOnHover: $infoOnHover, colorOnFocus: $infoOnFocus));
+}

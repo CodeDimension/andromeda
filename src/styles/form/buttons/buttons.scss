@@ -1,0 +1,66 @@
+@mixin btn($config) {
+    background: map-get($config, color);
+    color: map-get($config, fontColor);
+
+    &:hover {
+        background: map-get($config, colorOnHover);
+    }
+
+    &:active, &:focus  {
+        background: map-get($config, colorOnFocus);
+    }
+}
+
+.an-btn-primary {
+    @include btn((
+        color: $primary,
+        fontColor: $fontColor,
+        colorOnHover: $primaryOnHover,
+        colorOnFocus: $primaryOnFocus
+    ));
+}
+
+.an-btn-secondary {
+    @include btn((
+        color: $secondary,
+        fontColor: $darkFontColor,
+        colorOnHover: $secondaryOnHover,
+        colorOnFocus: $secondaryOnFocus
+    ));
+}
+
+.an-btn-success {
+    @include btn((
+        color: $success,
+        fontColor: $fontColor,
+        colorOnHover: $successOnHover,
+        colorOnFocus: $successOnFocus
+    ));
+}
+
+.an-btn-warn {
+    @include btn((
+        color: $warn,
+        fontColor: $fontColor,
+        colorOnHover: $warnOnHover,
+        colorOnFocus: $warnOnFocus
+    ));
+}
+
+.an-btn-danger {
+    @include btn((
+        color: $danger,
+        fontColor: $fontColor,
+        colorOnHover: $dangerOnHover,
+        colorOnFocus: $dangerOnFocus
+    ));
+}
+
+.an-btn-info {
+    @include btn((
+        color: $info,
+        fontColor: $fontColor,
+        colorOnHover: $infoOnHover,
+        colorOnFocus: $infoOnFocus
+    ));
+}

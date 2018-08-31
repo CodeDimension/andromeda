@@ -1,0 +1,22 @@
+.an-radio {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    outline: none;
+}
+
+.an-radio:checked:after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    left: 2px;
+    top: 2px;
+}
