@@ -11,38 +11,38 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
-    'first': string;
-    'last': string;
+  interface AnProgressBar {
+    'theme': string;
+    'value': number;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    'first'?: string;
-    'last'?: string;
+  interface AnProgressBarAttributes extends StencilHTMLAttributes {
+    'theme'?: string;
+    'value'?: number;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'AnProgressBar': Components.AnProgressBar;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'an-progress-bar': Components.AnProgressBarAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLAnProgressBarElement extends Components.AnProgressBar, HTMLStencilElement {}
+  var HTMLAnProgressBarElement: {
+    prototype: HTMLAnProgressBarElement;
+    new (): HTMLAnProgressBarElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'an-progress-bar': HTMLAnProgressBarElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'an-progress-bar': HTMLAnProgressBarElement;
   }
 
 
