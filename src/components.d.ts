@@ -11,6 +11,14 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface AnAlert {
+    'theme': string;
+  }
+  interface AnAlertAttributes extends StencilHTMLAttributes {
+    'onOnclose'?: (event: CustomEvent) => void;
+    'theme'?: string;
+  }
+
   interface AnProgressBar {
     'theme': string;
     'value': number;
@@ -23,13 +31,21 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AnAlert': Components.AnAlert;
     'AnProgressBar': Components.AnProgressBar;
   }
 
   interface StencilIntrinsicElements {
+    'an-alert': Components.AnAlertAttributes;
     'an-progress-bar': Components.AnProgressBarAttributes;
   }
 
+
+  interface HTMLAnAlertElement extends Components.AnAlert, HTMLStencilElement {}
+  var HTMLAnAlertElement: {
+    prototype: HTMLAnAlertElement;
+    new (): HTMLAnAlertElement;
+  };
 
   interface HTMLAnProgressBarElement extends Components.AnProgressBar, HTMLStencilElement {}
   var HTMLAnProgressBarElement: {
@@ -38,10 +54,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'an-alert': HTMLAnAlertElement
     'an-progress-bar': HTMLAnProgressBarElement
   }
 
   interface ElementTagNameMap {
+    'an-alert': HTMLAnAlertElement;
     'an-progress-bar': HTMLAnProgressBarElement;
   }
 

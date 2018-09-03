@@ -22,6 +22,10 @@
     .an-alert-close {
         margin-left: auto;
         font-weight: bolder;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
