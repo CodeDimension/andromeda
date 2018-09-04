@@ -6,27 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body div {
-            margin-bottom: 20px;
-        }
-    </style>
 
     <link rel="stylesheet" href="/build/andromeda.css">
     <script src="/build/andromeda.js"></script>
 </head>
 
+<style>
+    .mg {
+        margin-bottom: 15px;
+    }
+</style>
+
 <body>
 
-    <input type="file" name="" id="" multiple>
-    
-    <script>
-        var alerts = document.querySelectorAll('an-alert');
+    <div class="mg">
+        <an-input-file placeholder="Selecionar arquivo" multiple></an-input-file>
+    </div>
 
-        alerts.forEach(alert => alert.addEventListener('onclose', (e) => {
-            debugger
-        }))
-        
+    <div class="mg">
+        <an-input-file theme="secondary" placeholder="Selecionar arquivo" multiple></an-input-file>
+    </div>
+
+    <div class="mg">
+        <an-input-file theme="success" placeholder="Selecionar arquivo" multiple></an-input-file>
+    </div>
+
+    <div class="mg">
+        <an-input-file theme="warn" placeholder="Selecionar arquivo" multiple></an-input-file>
+    </div>
+
+    <div class="mg">
+        <an-input-file theme="danger" placeholder="Selecionar arquivo" multiple></an-input-file>
+    </div>
+
+    <div class="mg">
+        <an-input-file theme="info" placeholder="Selecionar arquivo" multiple></an-input-file>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            var files = document.querySelectorAll('an-input-file');
+
+            files.forEach(item => {
+                item.setSelectedFilesMessage(files => {
+                    if (!files.length) {
+                        return 'Nenhum arquivo';
+                    }
+
+                    if (files.length === 1) {
+                        if (files[0].name.length > 15) {
+                            return files[0].name.substr(0, 15) + '...';
+                        }
+
+                        return files[0].name;
+                    }
+
+                    return `${files.length} arquivos`;
+                });
+
+                item.addEventListener('onchange', (e) => {
+                    console.info(e)
+                })
+            })
+        }, 50);
+
     </script>
 
 </body>

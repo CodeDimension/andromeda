@@ -1,0 +1,86 @@
+.an-input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.an-input-file+.an-input-file-label {
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 25px;
+    outline: none;
+    height: 35px;
+    width: 100%;
+    max-width: 300px;
+    .an-input-file-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        width: 50%;
+        text-align: center;
+    }
+    .an-input-file-filename {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 15px;
+        overflow: hidden;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+.an-input-file-primary+.an-input-file-label {
+    border-color: $primary;
+    .an-input-file-btn {
+        color: $fontColor;
+        background: $primary;
+    }
+}
+
+.an-input-file-secondary+.an-input-file-label {
+    border-color: $secondary;
+    .an-input-file-btn {
+        color: $fontColor;
+        background: $secondary;
+    }
+}
+
+.an-input-file-success+.an-input-file-label {
+    border-color: $success;
+    .an-input-file-btn {
+        color: $fontColor;
+        background: $success;
+    }
+}
+
+.an-input-file-warn+.an-input-file-label {
+    border-color: $warn;
+    .an-input-file-btn {
+        color: $fontColor;
+        background: $warn;
+    }
+}
+
+.an-input-file-danger+.an-input-file-label {
+    border-color: $danger;
+    .an-input-file-btn {
+        color: $fontColor;
+        background: $danger;
+    }
+}
+
+.an-input-file-info+.an-input-file-label {
+    border-color: $info;
+    .an-input-file-btn {
+        color: $fontColor;
+        background: $info;
+    }
+}

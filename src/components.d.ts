@@ -19,6 +19,21 @@ export namespace Components {
     'theme'?: string;
   }
 
+  interface AnInputFile {
+    'accept': string;
+    'multiple': boolean;
+    'placeholder': string;
+    'setSelectedFilesMessage': (fn: (files: File[]) => string) => void;
+    'theme': string;
+  }
+  interface AnInputFileAttributes extends StencilHTMLAttributes {
+    'accept'?: string;
+    'multiple'?: boolean;
+    'onOnchange'?: (event: CustomEvent) => void;
+    'placeholder'?: string;
+    'theme'?: string;
+  }
+
   interface AnProgressBar {
     'theme': string;
     'value': number;
@@ -32,11 +47,13 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AnAlert': Components.AnAlert;
+    'AnInputFile': Components.AnInputFile;
     'AnProgressBar': Components.AnProgressBar;
   }
 
   interface StencilIntrinsicElements {
     'an-alert': Components.AnAlertAttributes;
+    'an-input-file': Components.AnInputFileAttributes;
     'an-progress-bar': Components.AnProgressBarAttributes;
   }
 
@@ -47,6 +64,12 @@ declare global {
     new (): HTMLAnAlertElement;
   };
 
+  interface HTMLAnInputFileElement extends Components.AnInputFile, HTMLStencilElement {}
+  var HTMLAnInputFileElement: {
+    prototype: HTMLAnInputFileElement;
+    new (): HTMLAnInputFileElement;
+  };
+
   interface HTMLAnProgressBarElement extends Components.AnProgressBar, HTMLStencilElement {}
   var HTMLAnProgressBarElement: {
     prototype: HTMLAnProgressBarElement;
@@ -55,11 +78,13 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'an-alert': HTMLAnAlertElement
+    'an-input-file': HTMLAnInputFileElement
     'an-progress-bar': HTMLAnProgressBarElement
   }
 
   interface ElementTagNameMap {
     'an-alert': HTMLAnAlertElement;
+    'an-input-file': HTMLAnInputFileElement;
     'an-progress-bar': HTMLAnProgressBarElement;
   }
 
