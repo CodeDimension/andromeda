@@ -9,6 +9,8 @@ export class alert {
 
     @Prop() theme: string = 'primary';
 
+    @Prop() closeable: boolean = false;
+
     @Event({ eventName: 'onclose' })
     onClose: EventEmitter;
 
@@ -24,9 +26,17 @@ export class alert {
     render() {
         this.element.classList.add('an-alert', `an-alert-${this.theme}`);
 
+        if(this.closeable) {
+            return [
+                <slot />,
+                <a class="an-alert-close" onClick={() => this.close()}>X</a>
+            ]
+        }
+
+        this.element.classList.add('an-alert-center-text');
+
         return [
-            <slot />,
-            <a class="an-alert-close" onClick={() => this.close()}>X</a>
+            <slot />
         ];
     }
 }

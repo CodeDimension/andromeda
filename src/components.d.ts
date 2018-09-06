@@ -12,9 +12,11 @@ import '@stencil/core';
 export namespace Components {
 
   interface AnAlert {
+    'closeable': boolean;
     'theme': string;
   }
   interface AnAlertAttributes extends StencilHTMLAttributes {
+    'closeable'?: boolean;
     'onOnclose'?: (event: CustomEvent) => void;
     'theme'?: string;
   }

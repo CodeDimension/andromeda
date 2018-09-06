@@ -16,10 +16,10 @@
     display: flex;
     align-items: center;
 
-    width: 100%;
+    width: calc(100% - 62px);
     min-width: 185px;
     max-width: 525px;
-    
+
     .an-alert-close {
         margin-left: auto;
         font-weight: bolder;
@@ -28,6 +28,11 @@
             cursor: pointer;
         }
     }
+}
+
+.an-alert-center-text {
+    text-align: justify;
+    justify-content: center;
 }
 
 .an-alert-primary { 

@@ -1,6 +1,6 @@
 {
   "name": "@code-dimension/andromeda",
-  "version": "0.0.0-alpha.3",
+  "version": "0.0.0-alpha.8",
   "description": "CSS framework to create great apps :gem:",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
