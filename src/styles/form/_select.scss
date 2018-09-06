@@ -7,8 +7,8 @@ $selectDownArrow: 'data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbm
     padding: 8px 15px;
     outline: none;
     font-size: 15px;
-    width: 100%;
-    max-width: 300px;
+    width: calc(100% - 32px);
+    max-width: 380px;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
