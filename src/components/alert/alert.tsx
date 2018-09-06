@@ -22,16 +22,11 @@ export class alert {
     }
 
     render() {
-        const classes = [
-            'an-alert',
-            `an-alert-${this.theme}`
-        ].join(' ');
+        this.element.classList.add('an-alert', `an-alert-${this.theme}`);
 
-        return (
-            <div class={classes}>
-                <slot />
-                <a class="an-alert-close" onClick={() => this.close()}>X</a>
-            </div>
-        );
+        return [
+            <slot />,
+            <a class="an-alert-close" onClick={() => this.close()}>X</a>
+        ];
     }
 }
