@@ -1,6 +1,6 @@
 {
-  "name": "@anui/andromeda",
-  "version": "0.0.0-alpha.2",
+  "name": "@code-dimension/andromeda",
+  "version": "0.0.0-alpha.3",
   "description": "CSS framework to create great apps :gem:",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -11,13 +11,13 @@
   ],
   "scripts": {
     "build": "npx stencil build",
-    "start": "npx stencil build --dev --watch --serve"
+    "start": "npx stencil build --dev --watch --serve",
+    "publish-lib": "npm run build && npm publish --access public"
   },
   "dependencies": {},
   "devDependencies": {
     "@stencil/core": "0.12.4",
     "@stencil/postcss": "0.1.0",
-    "@stencil/router": "^0.2.5",
     "@stencil/sass": "0.1.0",
     "@types/autoprefixer": "6.7.3",
     "autoprefixer": "9.1.3"
