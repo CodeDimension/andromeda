@@ -1,27 +1,33 @@
-import { Component, Prop, Event, EventEmitter, State, Method } from '@stencil/core';
+import { Component, Prop, Event, EventEmitter, State, Watch } from '@stencil/core';
+
+const selectedFilesMessageFn = files => {
+    if (!files.length) {
+        return 'No file selected';
+    }
+
+    if (files.length === 1) {
+        if (files[0].name.length > 15) {
+            return files[0].name.substr(0, 15) + '...';
+        }
+
+        return files[0].name;
+    }
+
+    return `${files.length} files`;
+}
+
+const defaultConfig = {
+    selectedFilesMessageFn
+};
 
 @Component({
     tag: 'an-input-file'
 })
 export class InputFile {
 
-    selectedFilesMessageFn: (files: File[]) => string = files => {
-        if (!files.length) {
-            return 'No file selected';
-        }
-
-        if (files.length === 1) {
-            if (files[0].name.length > 15) {
-                return files[0].name.substr(0, 15) + '...';
-            }
-
-            return files[0].name;
-        }
-
-        return `${files.length} files`;
-    };
-
     id = String(Date.now());
+
+    internalConfig = defaultConfig;
 
     @State() state: File[] = [];
 
@@ -33,16 +39,20 @@ export class InputFile {
 
     @Prop() accept: string;
 
+    @Prop() config;
+
+    @Watch('config')
+    onConfigChange(newValue) {
+
+        if (!newValue) {
+            return;
+        }
+
+        this.internalConfig = { ...defaultConfig, ...newValue };
+    }
+
     @Event({ eventName: 'onchange' })
     onChangeEmitter: EventEmitter;
-
-    @Method()
-    setSelectedFilesMessage(fn: (files: File[]) => string) {
-        this.selectedFilesMessageFn = fn;
-        
-        // re-render
-        this.state = this.state.slice();
-    }
 
     onChange(event) {
         const files = Array.from<File>(event.target.files);
@@ -76,7 +86,7 @@ export class InputFile {
             `an-input-file-${this.theme}`
         ].join(' ');
 
-        const selectedFilesText = this.selectedFilesMessageFn(this.state);
+        const selectedFilesText = this.internalConfig.selectedFilesMessageFn(this.state);
 
         return [
             <input class={classes}

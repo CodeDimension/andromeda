@@ -21,13 +21,14 @@ export namespace Components {
 
   interface AnInputFile {
     'accept': string;
+    'config': any;
     'multiple': boolean;
     'placeholder': string;
-    'setSelectedFilesMessage': (fn: (files: File[]) => string) => void;
     'theme': string;
   }
   interface AnInputFileAttributes extends StencilHTMLAttributes {
     'accept'?: string;
+    'config'?: any;
     'multiple'?: boolean;
     'onOnchange'?: (event: CustomEvent) => void;
     'placeholder'?: string;
