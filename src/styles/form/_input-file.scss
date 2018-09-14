@@ -16,6 +16,7 @@
     height: 35px;
     width: 100%;
     max-width: 380px;
+    cursor: pointer;
     .an-input-file-btn {
         display: flex;
         align-items: center;
@@ -38,49 +39,49 @@
 }
 
 .an-input-file-primary+.an-input-file-label {
-    border-color: $primary;
+    border-color: var(--an-primary);
     .an-input-file-btn {
-        color: $fontColor;
-        background: $primary;
+        color: var(--an-font-color);
+        background: var(--an-primary);
     }
 }
 
 .an-input-file-secondary+.an-input-file-label {
-    border-color: $secondary;
+    border-color: var(--an-secondary);
     .an-input-file-btn {
-        color: $fontColor;
-        background: $secondary;
+        color: var(--an-font-color);
+        background: var(--an-secondary);
     }
 }
 
 .an-input-file-success+.an-input-file-label {
-    border-color: $success;
+    border-color: var(--an-success);
     .an-input-file-btn {
-        color: $fontColor;
-        background: $success;
+        color: var(--an-font-color);
+        background: var(--an-success);
     }
 }
 
 .an-input-file-warn+.an-input-file-label {
-    border-color: $warn;
+    border-color: var(--an-warn);
     .an-input-file-btn {
-        color: $fontColor;
-        background: $warn;
+        color: var(--an-font-color);
+        background: var(--an-warn);
     }
 }
 
 .an-input-file-danger+.an-input-file-label {
-    border-color: $danger;
+    border-color: var(--an-danger);
     .an-input-file-btn {
-        color: $fontColor;
-        background: $danger;
+        color: var(--an-font-color);
+        background: var(--an-danger);
     }
 }
 
 .an-input-file-info+.an-input-file-label {
-    border-color: $info;
+    border-color: var(--an-info);
     .an-input-file-btn {
-        color: $fontColor;
-        background: $info;
+        color: var(--an-font-color);
+        background: var(--an-info);
     }
 }

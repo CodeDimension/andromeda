@@ -5,7 +5,7 @@
 }
 
 .an-alert {
-    color: $fontColor;
+    color: var(--an-font-color);
     
     padding: 10px 30px;
     border-radius: 45px;
@@ -37,48 +37,48 @@
 
 .an-alert-primary { 
     @include alert((
-        color: $primary,
-        border: $primaryOnHover,
-        fontColor: $fontColor
+        color: var(--an-primary),
+        border: var(--an-primary-hover),
+        fontColor: var(--an-font-color)
     ));
 }
 
 .an-alert-secondary { 
     @include alert((
-        color: $secondary,
-        border: $secondaryOnHover,
-        fontColor: $darkFontColor
+        color: var(--an-secondary),
+        border: var(--an-secondary-hover),
+        fontColor: var(--an-dark-font-color)
     ));
 }
 
 .an-alert-success { 
     @include alert((
-        color: $success,
-        border: $successOnHover,
-        fontColor: $fontColor
+        color: var(--an-success),
+        border: var(--an-success-hover),
+        fontColor: var(--an-font-color)
     ));
 }
 
 .an-alert-warn { 
     @include alert((
-        color: $warn,
-        border: $warnOnHover,
-        fontColor: $fontColor
+        color: var(--an-warn),
+        border: var(--an-warn-hover),
+        fontColor: var(--an-font-color)
     ));
 }
 
 .an-alert-danger { 
     @include alert((
-        color: $danger,
-        border: $dangerOnHover,
-        fontColor: $fontColor
+        color: var(--an-danger),
+        border: var(--an-danger-hover),
+        fontColor: var(--an-font-color)
     ));
 }
 
 .an-alert-info { 
     @include alert((
-        color: $info,
-        border: $infoOnHover,
-        fontColor: $fontColor
+        color: var(--an-info),
+        border: var(--an-info-hover),
+        fontColor: var(--an-font-color)
     ));
 }
