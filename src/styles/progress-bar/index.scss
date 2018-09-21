@@ -11,43 +11,43 @@
 }
 
 .an-progress-bar-primary {
-    border-color: $primary;
+    border-color: var(--an-primary);
     .an-progress-bar-value {
-        background: $primary;
+        background: var(--an-primary);
     }
 }
 
 .an-progress-bar-secondary {
-    border-color: $secondary;
+    border-color: var(--an-secondary);
     .an-progress-bar-value {
-        background: $secondary;
+        background: var(--an-secondary);
     }
 }
 
 .an-progress-bar-success {
-    border-color: $success;
+    border-color: var(--an-success);
     .an-progress-bar-value {
-        background: $success;
+        background: var(--an-success);
     }
 }
 
 .an-progress-bar-danger {
-    border-color: $danger;
+    border-color: var(--an-danger);
     .an-progress-bar-value {
-        background: $danger;
+        background: var(--an-danger);
     }
 }
 
 .an-progress-bar-warn {
-    border-color: $warn;
+    border-color: var(--an-warn);
     .an-progress-bar-value {
-        background: $warn;
+        background: var(--an-warn);
     }
 }
 
 .an-progress-bar-info {
-    border-color: $info;
+    border-color: var(--an-info);
     .an-progress-bar-value {
-        background: $info;
+        background: var(--an-info);
     }
 }

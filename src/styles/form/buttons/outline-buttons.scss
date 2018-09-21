@@ -16,48 +16,48 @@
 
 .an-btn-outline-primary {
     @include outlineBtn((
-        color: $primary,
-        colorOnHover: $primaryOnHover,
-        colorOnFocus: $primaryOnFocus
+        color: var(--an-primary),
+        colorOnHover: var(--an-primary-hover),
+        colorOnFocus: var(--an-primary-focus)
     ));
 }
 
 .an-btn-outline-secondary {
     @include outlineBtn((
-        color: $secondary,
-        colorOnHover: $secondaryOnHover,
-        colorOnFocus: $secondaryOnFocus
+        color: var(--an-secondary),
+        colorOnHover: var(--an-secondary-hover),
+        colorOnFocus: var(--an-secondary-focus)
     ));
 }
 
 .an-btn-outline-success {
     @include outlineBtn((
-        color: $success,
-        colorOnHover: $successOnHover,
-        colorOnFocus: $successOnFocus
+        color: var(--an-success),
+        colorOnHover: var(--an-success-hover),
+        colorOnFocus: var(--an-success-focus)
     ));
 }
 
 .an-btn-outline-warn {
     @include outlineBtn((
-        color: $warn,
-        colorOnHover: $warnOnHover,
-        colorOnFocus: $warnOnFocus
+        color: var(--an-warn),
+        colorOnHover: var(--an-warn-hover),
+        colorOnFocus: var(--an-warn-focus)
     ));
 }
 
 .an-btn-outline-danger {
     @include outlineBtn((
-        color: $danger,
-        colorOnHover: $dangerOnHover,
-        colorOnFocus: $dangerOnFocus
+        color: var(--an-danger),
+        colorOnHover: var(--an-danger-hover),
+        colorOnFocus: var(--an-danger-focus)
     ));
 }
 
 .an-btn-outline-info {
     @include outlineBtn((
-        color: $info,
-        colorOnHover: $infoOnHover,
-        colorOnFocus: $infoOnFocus
+        color: var(--an-info),
+        colorOnHover: var(--an-info-hover),
+        colorOnFocus: var(--an-info-focus)
     ));
 }

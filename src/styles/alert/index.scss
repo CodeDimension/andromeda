@@ -5,7 +5,12 @@
 }
 
 .an-alert {
+<<<<<<< HEAD
     color: $fontColor;
+=======
+    color: var(--an-font-color);
+    
+>>>>>>> 43dd5a0594422b6bb30ad3762b6ecf1e6e8413eb
     padding: 10px 30px;
     border-radius: 45px;
     min-height: 20px;
@@ -31,6 +36,7 @@
     justify-content: center;
 }
 
+<<<<<<< HEAD
 .an-alert-primary {
     @include alert(( color: $primary, border: $primaryOnHover, fontColor: $fontColor));
 }
@@ -53,4 +59,52 @@
 
 .an-alert-info {
     @include alert(( color: $info, border: $infoOnHover, fontColor: $fontColor));
+=======
+.an-alert-primary { 
+    @include alert((
+        color: var(--an-primary),
+        border: var(--an-primary-hover),
+        fontColor: var(--an-font-color)
+    ));
+}
+
+.an-alert-secondary { 
+    @include alert((
+        color: var(--an-secondary),
+        border: var(--an-secondary-hover),
+        fontColor: var(--an-dark-font-color)
+    ));
+}
+
+.an-alert-success { 
+    @include alert((
+        color: var(--an-success),
+        border: var(--an-success-hover),
+        fontColor: var(--an-font-color)
+    ));
+}
+
+.an-alert-warn { 
+    @include alert((
+        color: var(--an-warn),
+        border: var(--an-warn-hover),
+        fontColor: var(--an-font-color)
+    ));
+}
+
+.an-alert-danger { 
+    @include alert((
+        color: var(--an-danger),
+        border: var(--an-danger-hover),
+        fontColor: var(--an-font-color)
+    ));
+}
+
+.an-alert-info { 
+    @include alert((
+        color: var(--an-info),
+        border: var(--an-info-hover),
+        fontColor: var(--an-font-color)
+    ));
+>>>>>>> 43dd5a0594422b6bb30ad3762b6ecf1e6e8413eb
 }

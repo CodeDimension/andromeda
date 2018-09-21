@@ -16,7 +16,7 @@
                 margin-left: 20px;
                 z-index: 1;
                 width: 0.5px;
-                background: $divider;
+                background: var(--an-divider);
             }
         }
 
@@ -34,7 +34,7 @@
                     margin-left: -20px;
                     z-index: 1;
                     width: 0.5px;
-                    background: $divider;
+                    background: var(--an-divider);
                 }
             }
         }
