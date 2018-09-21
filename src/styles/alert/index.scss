@@ -5,12 +5,8 @@
 }
 
 .an-alert {
-<<<<<<< HEAD
-    color: $fontColor;
-=======
     color: var(--an-font-color);
     
->>>>>>> 43dd5a0594422b6bb30ad3762b6ecf1e6e8413eb
     padding: 10px 30px;
     border-radius: 45px;
     min-height: 20px;
@@ -36,30 +32,6 @@
     justify-content: center;
 }
 
-<<<<<<< HEAD
-.an-alert-primary {
-    @include alert(( color: $primary, border: $primaryOnHover, fontColor: $fontColor));
-}
-
-.an-alert-secondary {
-    @include alert(( color: $secondary, border: $secondaryOnHover, fontColor: $darkFontColor));
-}
-
-.an-alert-success {
-    @include alert(( color: $success, border: $successOnHover, fontColor: $fontColor));
-}
-
-.an-alert-warn {
-    @include alert(( color: $warn, border: $warnOnHover, fontColor: $fontColor));
-}
-
-.an-alert-danger {
-    @include alert(( color: $danger, border: $dangerOnHover, fontColor: $fontColor));
-}
-
-.an-alert-info {
-    @include alert(( color: $info, border: $infoOnHover, fontColor: $fontColor));
-=======
 .an-alert-primary { 
     @include alert((
         color: var(--an-primary),
@@ -106,5 +78,4 @@
         border: var(--an-info-hover),
         fontColor: var(--an-font-color)
     ));
->>>>>>> 43dd5a0594422b6bb30ad3762b6ecf1e6e8413eb
 }
