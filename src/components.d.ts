@@ -11,14 +11,11 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface AnAlert {
-    'closeable': boolean;
-    'theme': string;
+  interface AnDatatable {
+    'rows': any[];
   }
-  interface AnAlertAttributes extends StencilHTMLAttributes {
-    'closeable'?: boolean;
-    'onOnclose'?: (event: CustomEvent) => void;
-    'theme'?: string;
+  interface AnDatatableAttributes extends StencilHTMLAttributes {
+    'rows'?: any[];
   }
 
   interface AnInputFile {
@@ -49,22 +46,22 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
-    'AnAlert': Components.AnAlert;
+    'AnDatatable': Components.AnDatatable;
     'AnInputFile': Components.AnInputFile;
     'AnProgressBar': Components.AnProgressBar;
   }
 
   interface StencilIntrinsicElements {
-    'an-alert': Components.AnAlertAttributes;
+    'an-datatable': Components.AnDatatableAttributes;
     'an-input-file': Components.AnInputFileAttributes;
     'an-progress-bar': Components.AnProgressBarAttributes;
   }
 
 
-  interface HTMLAnAlertElement extends Components.AnAlert, HTMLStencilElement {}
-  var HTMLAnAlertElement: {
-    prototype: HTMLAnAlertElement;
-    new (): HTMLAnAlertElement;
+  interface HTMLAnDatatableElement extends Components.AnDatatable, HTMLStencilElement {}
+  var HTMLAnDatatableElement: {
+    prototype: HTMLAnDatatableElement;
+    new (): HTMLAnDatatableElement;
   };
 
   interface HTMLAnInputFileElement extends Components.AnInputFile, HTMLStencilElement {}
@@ -80,13 +77,13 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'an-alert': HTMLAnAlertElement
+    'an-datatable': HTMLAnDatatableElement
     'an-input-file': HTMLAnInputFileElement
     'an-progress-bar': HTMLAnProgressBarElement
   }
 
   interface ElementTagNameMap {
-    'an-alert': HTMLAnAlertElement;
+    'an-datatable': HTMLAnDatatableElement;
     'an-input-file': HTMLAnInputFileElement;
     'an-progress-bar': HTMLAnProgressBarElement;
   }
