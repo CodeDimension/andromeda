@@ -1,0 +1,12 @@
+.an-textarea {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 15px;
+    width: calc(100% - 32px);
+    max-width: 380px;
+    min-height: 80px;
+    resize: none;
+}

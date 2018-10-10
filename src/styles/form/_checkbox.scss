@@ -1,0 +1,20 @@
+.an-checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-width: 1px;
+    border-style: solid;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    outline: none;
+}
+
+.an-checkbox:checked:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 9px;
+    width: 9px;
+    left: 2px;
+    top: 2px;
+}

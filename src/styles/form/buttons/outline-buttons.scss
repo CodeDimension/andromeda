@@ -1,0 +1,63 @@
+@mixin outlineBtn($config) {
+    background: transparent;
+    border: 1px solid map-get($config, color);
+    color: map-get($config, color);
+
+    &:hover {
+        border: 1px solid map-get($config, colorOnHover);
+        color: map-get($config, colorOnHover); 
+    }
+
+    &:active, &:focus  {
+        border: 1px solid map-get($config, colorOnFocus);
+        color: map-get($config, colorOnFocus); 
+    }
+}
+
+.an-btn-outline-primary {
+    @include outlineBtn((
+        color: var(--an-primary),
+        colorOnHover: var(--an-primary-hover),
+        colorOnFocus: var(--an-primary-focus)
+    ));
+}
+
+.an-btn-outline-secondary {
+    @include outlineBtn((
+        color: var(--an-secondary),
+        colorOnHover: var(--an-secondary-hover),
+        colorOnFocus: var(--an-secondary-focus)
+    ));
+}
+
+.an-btn-outline-success {
+    @include outlineBtn((
+        color: var(--an-success),
+        colorOnHover: var(--an-success-hover),
+        colorOnFocus: var(--an-success-focus)
+    ));
+}
+
+.an-btn-outline-warn {
+    @include outlineBtn((
+        color: var(--an-warn),
+        colorOnHover: var(--an-warn-hover),
+        colorOnFocus: var(--an-warn-focus)
+    ));
+}
+
+.an-btn-outline-danger {
+    @include outlineBtn((
+        color: var(--an-danger),
+        colorOnHover: var(--an-danger-hover),
+        colorOnFocus: var(--an-danger-focus)
+    ));
+}
+
+.an-btn-outline-info {
+    @include outlineBtn((
+        color: var(--an-info),
+        colorOnHover: var(--an-info-hover),
+        colorOnFocus: var(--an-info-focus)
+    ));
+}

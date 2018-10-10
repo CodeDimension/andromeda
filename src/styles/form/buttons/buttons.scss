@@ -1,0 +1,66 @@
+@mixin btn($config) {
+    background: map-get($config, color);
+    color: map-get($config, fontColor);
+
+    &:hover {
+        background: map-get($config, colorOnHover);
+    }
+
+    &:active, &:focus  {
+        background: map-get($config, colorOnFocus);
+    }
+}
+
+.an-btn-primary {
+    @include btn((
+        color: var(--an-primary),
+        fontColor: var(--an-font-color),
+        colorOnHover: var(--an-primary-hover),
+        colorOnFocus: var(--an-primary-focus)
+    ));
+}
+
+.an-btn-secondary {
+    @include btn((
+        color: var(--an-secondary),
+        fontColor: var(--an-dark-font-color),
+        colorOnHover: var(--an-secondary-hover),
+        colorOnFocus: var(--an-secondary-focus)
+    ));
+}
+
+.an-btn-success {
+    @include btn((
+        color: var(--an-success),
+        fontColor: var(--an-font-color),
+        colorOnHover: var(--an-success-hover),
+        colorOnFocus: var(--an-success-focus)
+    ));
+}
+
+.an-btn-warn {
+    @include btn((
+        color: var(--an-warn),
+        fontColor: var(--an-font-color),
+        colorOnHover: var(--an-warn-hover),
+        colorOnFocus: var(--an-warn-focus)
+    ));
+}
+
+.an-btn-danger {
+    @include btn((
+        color: var(--an-danger),
+        fontColor: var(--an-font-color),
+        colorOnHover: var(--an-danger-hover),
+        colorOnFocus: var(--an-danger-focus)
+    ));
+}
+
+.an-btn-info {
+    @include btn((
+        color: var(--an-info),
+        fontColor: var(--an-font-color),
+        colorOnHover: var(--an-info-hover),
+        colorOnFocus: var(--an-info-focus)
+    ));
+}
