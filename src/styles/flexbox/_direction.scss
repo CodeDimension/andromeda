@@ -1,0 +1,25 @@
+@mixin direction($media: null) {
+    
+    
+
+    .anx#{$media}-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .anx#{$media}-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .anx#{$media}-row-reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .anx#{$media}-column-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
