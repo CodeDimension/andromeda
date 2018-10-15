@@ -1,0 +1,13 @@
+@mixin createClass($class, $media: null) {
+    $current: '.anx';
+    
+    @if $media != null {
+        $current: '#{$current}-#{$media}';
+    }
+
+    $current: '#{$current}-#{$class}';
+
+    #{$current} {
+        @content;
+    }
+}

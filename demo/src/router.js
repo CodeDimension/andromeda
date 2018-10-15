@@ -10,6 +10,7 @@ import radio from './views/radio.vue';
 import select from './views/select.vue';
 import slideToggle from './views/slide-toggle.vue';
 import textarea from './views/textarea.vue';
+import flexbox from './views/flexbox.vue';
 
 Vue.use(Router)
 
@@ -66,6 +67,11 @@ export default new Router({
       path: '/textarea',
       name: 'textarea',
       component: textarea
+    },
+    {
+      path: '/flexbox',
+      name: 'flexbox',
+      component: flexbox
     }
   ]
 })

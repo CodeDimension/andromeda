@@ -3,8 +3,6 @@ import App from './App.vue'
 import router from './router'
 import Andromeda from './../../src/install';
 
-Vue.config.productionTip = false
-
 Vue.use(Andromeda);
 
 new Vue({

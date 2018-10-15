@@ -11,6 +11,7 @@
       <router-link to="/select">select</router-link>
       <router-link to="/slide-toggle">slide toggle</router-link>
       <router-link to="/textarea">textarea</router-link>
+      <router-link to="/flexbox">flexbox</router-link>
     </div>
 
     <router-view />
@@ -18,6 +19,11 @@
 </template>
 
 <style lang="scss">
+html, body, #app {
+  margin: 0;
+  height: 100%;
+}
+
 .mg-bt {
   margin-bottom: 15px;
 }

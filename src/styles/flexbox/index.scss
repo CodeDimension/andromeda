@@ -1,23 +1,45 @@
+@import 'mixins';
+@import 'layout';
+
+// no media
+@include layout();
+
 // xs
-@media screen and (max-width: 599px) {}
+@media screen and (max-width: 599px) {
+    @include layout(xs);
+}
 
 // gt-sx	
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 600px) {
+    @include layout(gt-xs);
+}
 
 // sm
-@media screen and (min-width: 600px) and (max-width: 959px) {}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    @include layout(sm);
+}
 
 // gt-sm	
-@media screen and (min-width: 960px) {}
+@media screen and (min-width: 960px) {
+    @include layout(gt-sm);
+}
 
 // md	
-@media screen and (min-width: 960px) and (max-width: 1279px) {}
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+    @include layout(md);
+}
 
 // gt-md	
-@media screen and (min-width: 1280px) {}
+@media screen and (min-width: 1280px) {
+    @include layout(gt-md);
+}
 
 //lg	
-@media screen and (min-width: 1280px) and (max-width: 1919px) {}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    @include layout(lg);
+}
 
 //gt-lg
-@media screen and (min-width: 1920px) {}
+@media screen and (min-width: 1920px) {
+    @include layout(gt-lg);
+}

@@ -1,0 +1,93 @@
+@mixin layout($media: null) {
+    @include _alignment($media);
+    @include _basis($media);
+    @include _direction($media);
+    @include _wrap($media);
+}
+
+@mixin _direction($media: null) {
+    @include createClass('row', $media) {
+        display: flex;
+        flex-direction: row;
+    }
+    @include createClass('column', $media) {
+        display: flex;
+        flex-direction: column;
+    }
+    @include createClass('row-reverse', $media) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    @include createClass('column-reverse', $media) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@mixin _wrap($media: null) {
+    @include createClass('wrap', $media) {
+        flex-wrap: wrap;
+    }
+    @include createClass('wrap-reverse', $media) {
+        flex-wrap: wrap-reverse;
+    }
+    @include createClass('nowrap', $media) {
+        flex-wrap: nowrap;
+    }
+    @include createClass('unset', $media) {
+        flex-wrap: unset;
+    }
+}
+
+@mixin _alignment($media: null) {
+    @include createClass('start', $media) {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    @include createClass('start-center', $media) {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    @include createClass('start-end', $media) {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    @include createClass('center-start', $media) {
+        justify-content: center;
+        align-items: flex-start;
+    }
+    @include createClass('center', $media) {
+        justify-content: center;
+        align-items: center;
+    }
+    @include createClass('center-end', $media) {
+        justify-content: center;
+        align-items: flex-end;
+    }
+    @include createClass('end-start', $media) {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    @include createClass('end-start', $media) {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    @include createClass('end-center', $media) {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    @include createClass('end', $media) {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+@mixin _basis($media: null) {
+    $i: 5;
+    @while $i < 101 {
+        @include createClass('#{$i}', $media) {
+            flex-basis: $i + 0%;
+        }
+        $i: $i+5;
+    }
+}
