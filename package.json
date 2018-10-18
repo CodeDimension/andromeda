@@ -1,6 +1,6 @@
 {
   "name": "andromeda",
-  "version": "0.0.0-alpha.10",
+  "version": "0.0.0-alpha.11",
   "private": true,
   "scripts": {
     "build": "npm run lint && vue-cli-service build --target lib --name andromeda src/install.js",
