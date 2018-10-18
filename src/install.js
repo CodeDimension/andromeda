@@ -1,5 +1,4 @@
 import './styles/index.scss';
-import Vue from 'vue';
 import components from './components/components';
 
 const Andromeda = {
@@ -11,10 +10,6 @@ const Andromeda = {
         }
 
     }
-}
-
-if (process.browser && window.Vue) {
-    Vue.use(Andromeda);
 }
 
 export default Andromeda;
