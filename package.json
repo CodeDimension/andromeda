@@ -1,7 +1,11 @@
 {
   "name": "andromeda",
   "version": "0.0.0-alpha.11",
-  "private": true,
+  "main": "dist/andromeda.common.js",
+  "author": {
+    "email": "martinshenrique8@gmail.com",
+    "name": "Henrique Custódia"
+  },
   "scripts": {
     "build": "npm run lint && vue-cli-service build --target lib --name andromeda src/install.js",
     "lint": "vue-cli-service lint"
@@ -45,5 +49,15 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "keywords": [
+    "vue",
+    "components",
+    "library",
+    "ui",
+    "andromeda"
+  ],
+  "repository": {
+    "url": "https://github.com/code-dimension/andromeda"
+  },
 }
