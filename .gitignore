@@ -3,6 +3,8 @@ node_modules
 demo/node_modules
 /dist
 
+*.tgz
+
 # local env files
 .env.local
 .env.*.local

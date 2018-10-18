@@ -3,3 +3,6 @@
 .editorconfig
 node_modules/
 demo
+*.tgz
+babel.config.js
+.prettierrc.json
