@@ -1,5 +1,5 @@
 {
-  "name": "andromeda",
+  "name": "@code-dimension/andromeda",
   "version": "0.0.0-alpha.11",
   "main": "dist/andromeda.common.js",
   "author": {
