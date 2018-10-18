@@ -13,7 +13,7 @@ const Andromeda = {
     }
 }
 
-if (window.Vue) {
+if (process.browser && window.Vue) {
     Vue.use(Andromeda);
 }
 
